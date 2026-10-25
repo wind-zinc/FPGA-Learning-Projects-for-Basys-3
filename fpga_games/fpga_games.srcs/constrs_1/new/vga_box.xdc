@@ -1,0 +1,56 @@
+# 1. 时钟约束 (100MHz)
+set_property PACKAGE_PIN W5 [get_ports clk_100m]
+set_property IOSTANDARD LVCMOS33 [get_ports clk_100m]
+
+# 2. 按键约束 (上下左右 + 中间复位)
+set_property PACKAGE_PIN T18 [get_ports btn_up]
+set_property IOSTANDARD LVCMOS33 [get_ports btn_up]
+
+set_property PACKAGE_PIN W19 [get_ports btn_left]
+set_property IOSTANDARD LVCMOS33 [get_ports btn_left]
+
+set_property PACKAGE_PIN T17 [get_ports btn_right]
+set_property IOSTANDARD LVCMOS33 [get_ports btn_right]
+
+set_property PACKAGE_PIN U17 [get_ports btn_down]
+set_property IOSTANDARD LVCMOS33 [get_ports btn_down]
+
+set_property PACKAGE_PIN U18 [get_ports btn_rst]
+set_property IOSTANDARD LVCMOS33 [get_ports btn_rst]
+
+# 3. VGA 物理引脚约束 (Basys 3 专用引脚布局)
+# 红色通道 
+set_property PACKAGE_PIN G19 [get_ports {vga_r[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vga_r[0]}]
+set_property PACKAGE_PIN H19 [get_ports {vga_r[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vga_r[1]}]
+set_property PACKAGE_PIN J19 [get_ports {vga_r[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vga_r[2]}]
+set_property PACKAGE_PIN N19 [get_ports {vga_r[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vga_r[3]}]
+
+# 绿色通道 
+set_property PACKAGE_PIN J17 [get_ports {vga_g[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vga_g[0]}]
+set_property PACKAGE_PIN H17 [get_ports {vga_g[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vga_g[1]}]
+set_property PACKAGE_PIN G17 [get_ports {vga_g[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vga_g[2]}]
+set_property PACKAGE_PIN D17 [get_ports {vga_g[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vga_g[3]}]
+
+# 蓝色通道 
+set_property PACKAGE_PIN N18 [get_ports {vga_b[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vga_b[0]}]
+set_property PACKAGE_PIN L18 [get_ports {vga_b[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vga_b[1]}]
+set_property PACKAGE_PIN K18 [get_ports {vga_b[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vga_b[2]}]
+set_property PACKAGE_PIN J18 [get_ports {vga_b[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vga_b[3]}]
+
+# 同步信号
+set_property PACKAGE_PIN P19 [get_ports vga_hsync]
+set_property IOSTANDARD LVCMOS33 [get_ports vga_hsync]
+set_property PACKAGE_PIN R19 [get_ports vga_vsync]
+set_property IOSTANDARD LVCMOS33 [get_ports vga_vsync]

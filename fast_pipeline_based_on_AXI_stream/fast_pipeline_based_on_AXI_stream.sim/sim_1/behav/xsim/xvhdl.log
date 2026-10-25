@@ -1,0 +1,2 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/zine/Desktop/Verilog/fast_pipeline_based_on_AXI_stream/fast_pipeline_based_on_AXI_stream.gen/sources_1/ip/dds_compiler_0/sim/dds_compiler_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dds_compiler_0'

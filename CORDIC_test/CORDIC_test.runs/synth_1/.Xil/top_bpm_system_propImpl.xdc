@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/Users/zine/Desktop/Verilog/CORDIC_test/CORDIC_test.srcs/constrs_1/new/cordic_test.xdc rfile:../../../CORDIC_test.srcs/constrs_1/new/cordic_test.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN W5 [get_ports clk]
+set_property src_info {type:XDC file:1 line:23 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U18 [get_ports rst_n]
