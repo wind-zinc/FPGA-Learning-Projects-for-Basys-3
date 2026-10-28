@@ -18,3 +18,9 @@ Verilog and SystemVerilog projects developed with Vivado 2022.2 for the Digilent
 - **fpga_temperature_monitor** — Sends internal FPGA temperature samples over UART with Python serial-monitoring tools.
 - **vga_color_swap** — Alternates red and blue regions in a 640×480 VGA display.
 
+## Using Vivado IP
+
+Create a Vivado 2022.2 project for the Basys 3. Add the selected project's `RTL` sources and `constraints` files. For projects that use IP, add the required `.xci` files from `scripts/ip` with **Add Sources**, then generate the IP output products before synthesis.
+
+The `.xci` files preserve IP settings; Vivado regenerates their output files. For `bram_rom`, keep `scripts/sine_wave.coe` available. If it is missing, run `python scripts/gen_coe.py`.
+
