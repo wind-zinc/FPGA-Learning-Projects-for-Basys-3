@@ -1,7 +1,0 @@
-verilog xil_defaultlib --include "../../../ipstatic" \
-"../../../../fast_pipeline_based_on_AXI_stream.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
-"../../../../fast_pipeline_based_on_AXI_stream.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
-
-verilog xil_defaultlib "glbl.v"
-
-nosort

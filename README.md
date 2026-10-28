@@ -1,31 +1,20 @@
-# Basys 3 FPGA Practice
+# FPGA Learning Projects for Basys 3
 
-A collection of Verilog and SystemVerilog projects for the Digilent Basys 3 FPGA board, developed with Xilinx Vivado 2022.2. The examples cover RTL basics, Xilinx IP, clock-domain crossing, UART, and VGA.
+Verilog and SystemVerilog projects developed with Vivado 2022.2 for the Digilent Basys 3. The STM32 UART example uses an STM32F103C8T6.
 
 ## Projects
 
-| Project | Description |
-| --- | --- |
-| `BRAM_test` | Reads a BRAM-based ROM with an address counter; displays data on LEDs and probes it with ILA. |
-| `CORDIC_test` | DDS-based I/Q down-conversion, CIC decimation, and CORDIC magnitude/phase output. |
-| `DAQ` | PRBS-7 sequence generator with a 200 MHz clock and ILA capture. |
-| `DDS_test` | DDS sine-wave output displayed on LEDs and captured by ILA. |
-| `fast_pipeline_based_on_AXI_stream` | DDS data crosses from 100 MHz to 200 MHz through an asynchronous FIFO, then an AXI4-Stream packetizer adds a header, sequence number, 1,024 samples, and checksum. Includes simulation testbenches. |
-| `FIFO_test` | Asynchronous FIFO transfers counter data between 65 MHz and 100 MHz clock domains; ILA probes the read side. |
-| `fpga_games` | VGA output with a button-controlled white square on a black background. |
-| `led` | 100 MHz clock divider drives a blinking LED. |
-| `project_2` | Analog-input-triggered LED controller with a three-second hold timer. |
-| `stm32_basys3` | Receives 115,200-baud UART data from an STM32 and displays each byte on the LEDs. |
-| `switch2` | `case`-based mode selection between AND and OR logic. |
-| `temp_readout` | Reads the FPGA's internal temperature sensor and sends each sample over UART; includes Python monitor and plot scripts. |
-| `vga_color_swap` | 640×480 VGA output with red and blue screen halves that swap once per second. |
+- **bram_rom** — Reads a sine-wave table from block RAM and observes the output with LEDs and ILA.
+- **cordic_iq_demodulator** — Demonstrates DDS-based I/Q down-conversion, CIC decimation, and CORDIC magnitude and phase output.
+- **prbs_data_acquisition** — Generates a PRBS-7 sequence with ILA monitoring.
+- **dds_sine_wave** — Generates a DDS sine wave for LED display and ILA capture.
+- **axi_stream_packetizer** — Moves DDS AXI4-Stream data across clock domains and packetizes samples.
+- **async_fifo_cdc** — Transfers counter data between 65 MHz and 100 MHz clock domains using an asynchronous FIFO.
+- **vga_box_game** — Displays a button-controlled white square over VGA.
+- **led_blinker** — Blinks an LED using the 100 MHz board clock.
+- **analog_triggered_led** — Controls an LED with an analog-input-triggered timed state machine.
+- **stm32_uart_receiver** — Receives 115,200-baud UART data from an STM32F103C8T6 and displays it on LEDs.
+- **switch_controlled_logic** — Selects AND or OR logic with a switch-controlled case statement.
+- **fpga_temperature_monitor** — Sends internal FPGA temperature samples over UART with Python serial-monitoring tools.
+- **vga_color_swap** — Alternates red and blue regions in a 640×480 VGA display.
 
-## Open a Project
-
-Open the desired `.xpr` file in Vivado. Vivado IP Catalog blocks may need their output products regenerated.
-
-## Hardware and Tools
-
-- **Vivado:** 2022.2
-- **FPGA board:** Digilent Basys 3 (Artix-7 XC7A35T)
-- **STM32 MCU:** STM32F103C8T6, communicating over UART at 115,200 baud.

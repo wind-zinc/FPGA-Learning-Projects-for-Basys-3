@@ -1,4 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../../fast_pipeline_based_on_AXI_stream.gen/sources_1/ip/dds_compiler_0/sim/dds_compiler_0.vhd" \
-
-nosort
